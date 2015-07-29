@@ -18,6 +18,7 @@
 		BF623E9B1B54A1F60035135E /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF623E9A1B54A1F60035135E /* SKBounceAnimation.m */; };
 		BF623E9F1B54B4AF0035135E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF623E9E1B54B4AF0035135E /* SecondViewController.m */; };
 		BF623EA31B54BE5A0035135E /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF623EA21B54BE5A0035135E /* PostView.m */; };
+		BF732F081B686395005EC34F /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF732F071B686395005EC34F /* FifthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		BF623E9E1B54B4AF0035135E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		BF623EA11B54BE5A0035135E /* PostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
 		BF623EA21B54BE5A0035135E /* PostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
+		BF732F061B686395005EC34F /* FifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
+		BF732F071B686395005EC34F /* FifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				BF1FDDDD1B55983900FA46BF /* ThirdViewController.m */,
 				BF151B031B57625100C012BD /* FourthViewController.h */,
 				BF151B041B57625100C012BD /* FourthViewController.m */,
+				BF732F061B686395005EC34F /* FifthViewController.h */,
+				BF732F071B686395005EC34F /* FifthViewController.m */,
 				BF623EA01B54BE4F0035135E /* Views */,
 				BF623E9C1B54A1FD0035135E /* Animations */,
 				BF623E801B5499330035135E /* Images.xcassets */,
@@ -256,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF732F081B686395005EC34F /* FifthViewController.m in Sources */,
 				BF151B051B57625100C012BD /* FourthViewController.m in Sources */,
 				BF623E9F1B54B4AF0035135E /* SecondViewController.m in Sources */,
 				BF623E9B1B54A1F60035135E /* SKBounceAnimation.m in Sources */,
