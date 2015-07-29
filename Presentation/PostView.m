@@ -66,6 +66,16 @@
     return self;
 }
 
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    
+    [self.imageView setFrame:CGRectMake(10, 10, self.frame.size.height-20, self.frame.size.height-20)];
+    [self.titleView setFrame:CGRectMake(self.frame.size.height, 10, self.frame.size.width-(self.frame.size.height + 10), 15)];
+    [self.contentViewLineOne setFrame:CGRectMake(self.frame.size.height + 10, 40, self.frame.size.width-(self.frame.size.height + 20), 10)];
+    [self.contentViewLineTwo setFrame:CGRectMake(self.frame.size.height + 10, 60, self.frame.size.width-(self.frame.size.height + 20), 10)];
+    [self.contentViewLineThree setFrame:CGRectMake(self.frame.size.height + 10, 80, self.frame.size.width-(self.frame.size.height + 20), 10)];
+}
+
 - (void)animateLinesIn {
     [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:0.5 options:0 animations:^{
         [self.titleView setFrame:CGRectMake(10, 10, self.frame.size.width-20, 15)];

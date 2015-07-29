@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "PostView.h"
+#import "ThirdViewController.h"
 
 @interface SecondViewController ()
 
@@ -234,7 +235,31 @@
 }
 
 - (void)eleven {
+    UIView *purpleView = [[UIView alloc] initWithFrame:CGRectMake(0, -self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    [purpleView setBackgroundColor:[UIColor colorWithRed:0.56 green:0.27 blue:0.68 alpha:1]];
+    [self.view addSubview:purpleView];
     
+    [UIView animateWithDuration:0.3 animations:^{
+        [purpleView setFrame:self.view.bounds];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.1 animations:^{
+            [purpleView setFrame:CGRectMake(0, -20, purpleView.frame.size.width, purpleView.frame.size.height)];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.05 animations:^{
+                [purpleView setFrame:CGRectMake(0, 0, purpleView.frame.size.width, purpleView.frame.size.height)];
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.05 animations:^{
+                    [purpleView setFrame:CGRectMake(0, -10, purpleView.frame.size.width, purpleView.frame.size.height)];
+                } completion:^(BOOL finished) {
+                    [UIView animateWithDuration:0.05 animations:^{
+                        [purpleView setFrame:CGRectMake(0, 0, purpleView.frame.size.width, purpleView.frame.size.height)];
+                    } completion:^(BOOL finished) {
+                        [self presentViewController:[[ThirdViewController alloc] initWithNibName:nil bundle:nil] animated:NO completion:nil];
+                    }];
+                }];
+            }];
+        }];
+    }];
 }
 
 @end
