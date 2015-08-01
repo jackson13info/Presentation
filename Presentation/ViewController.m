@@ -30,6 +30,12 @@
 
 @implementation ViewController
 
+/*
+ * Introduction
+ * Who you are and what team you worked on
+ * How you heard about WillowTree
+ * Why you decided to do your presentation as an iPad App
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -57,6 +63,10 @@
     [self.scene1 addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * Learned a couple of things when I first got here
+ * and the first one was design from Jordan. Line spacing.
+ */
 - (void)one {
     
     [UIView animateWithDuration:0.5 animations:^{
@@ -105,6 +115,10 @@
     [self.scene1 addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * And then I started to learn how to make some pretty apps. So let's just change this from 
+ * blank and add in some material design.
+ */
 - (void)two {
     SKBounceAnimation *animation = [SKBounceAnimation animationWithKeyPath:@"transform.scale"];
     [animation setFromValue:@(1.0)];

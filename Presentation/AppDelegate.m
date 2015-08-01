@@ -11,6 +11,7 @@
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
 #import "FourthViewController.h"
+#import "FifthViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,10 +22,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [application setStatusBarHidden:YES];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window setRootViewController:[[FourthViewController alloc] initWithNibName:nil bundle:nil]];
+    [self.window setRootViewController:[[ViewController alloc] initWithNibName:nil bundle:nil]];
     [self.window makeKeyAndVisible];
     return YES;
 }

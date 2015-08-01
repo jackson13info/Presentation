@@ -29,6 +29,14 @@
 
 @implementation SecondViewController
 
+
+/*
+ * When I first started things were hectic
+ * came in late
+ * they didn't know what I should do
+ * they said practice
+ * and my first practice was using reddit
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -45,6 +53,15 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * So they said why not make a reddit client
+ * for the iphone.
+ * use some core data
+ * table view
+ * auto layout
+ * these things called storyboards
+ * don't like drag and drop
+ */
 - (void)one {
     self.redView = [[UIView alloc] initWithFrame:CGRectMake((self.view.frame.size.width/2.0)-140, (self.view.frame.size.height/2.0)-140, 280, 280)];
     [self.redView setBackgroundColor:[UIColor colorWithRed:0.96 green:0.36 blue:0.36 alpha:1]];
@@ -83,6 +100,12 @@
     }];
 }
 
+/*
+ * So I started to work and made the basic feed that everyone sees
+ * Simple table view
+ * some nice auto layouts
+ * and of course a storyboard
+ */
 - (void)two {
     [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.6 options:0 animations:^{
         [self.iPhoneImage setFrame:CGRectMake(((self.view.frame.size.width-100)/2.0)-250.0, -100, 500, self.redView.frame.size.height+200)];
@@ -113,6 +136,10 @@
     }];
 }
 
+/*
+ * Then add in some AFNetworking and maybe you'll get 
+ * a nice image.
+ */
 - (void)three {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -124,6 +151,10 @@
     
 }
 
+/*
+ * But then here came the challenging part. So every part of this used Core Data.
+ * It essentially was a syncing mechanism to cache the most recent posts.
+ */
 - (void)four {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -142,6 +173,11 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * And then came the comments.
+ * These things were a little tricky from the start.
+ * And they stumped me for a little while.
+ */
 - (void)five {
     CGRect startFrame = CGRectMake(((self.view.frame.size.width-100)/2.0)-180.0, 47, 359, 100);
     for (int index = 0; index < 6; index++) {
@@ -164,6 +200,10 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * It seemed like the way of storing the comments wasn't helping with core data
+ * because people could respond to each other's comments creating this cascading structure.
+ */
 - (void)six {
     for (int index = 1; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -175,6 +215,9 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * But the database stored them like this.
+ */
 - (void)seven {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -186,6 +229,11 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * Luckily I was able to figure out how to do it after some drawing,
+ * and now no matter what it will work with Reddit comments. Even if they
+ * look like this.
+ */
 - (void)eight {
     for (int index = 1; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -197,6 +245,9 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * or even worse. This
+ */
 - (void)nine {
     NSArray *numbers = @[@(4),@(5),@(6),@(1),@(2),@(2),@(1)];
     for (int index = 0; index < self.posts.count; index++) {
@@ -209,6 +260,11 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * So that was my first introduction to CoreData
+ * and storyboards. In the end I learned that CoreData was actually
+ * very nice but I still don't like storyboards haha.
+ */
 - (void)ten {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -234,6 +290,7 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/* And the transition */
 - (void)eleven {
     UIView *purpleView = [[UIView alloc] initWithFrame:CGRectMake(0, -self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
     [purpleView setBackgroundColor:[UIColor colorWithRed:0.56 green:0.27 blue:0.68 alpha:1]];

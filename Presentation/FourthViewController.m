@@ -7,6 +7,7 @@
 //
 
 #import "FourthViewController.h"
+#import "FifthViewController.h"
 
 @interface FourthViewController ()
 
@@ -159,6 +160,15 @@
     [animation setFillMode:kCAFillModeForwards];
     [animation setRemovedOnCompletion:NO];
     [self.rightEye addAnimation:animation forKey:@"grow"];
+    
+    [self.view removeGestureRecognizer:self.oldTap];
+    self.oldTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(five)];
+    [self.view addGestureRecognizer:self.oldTap];
+}
+
+- (void)five {
+    FifthViewController *controller = [[FifthViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 @end
