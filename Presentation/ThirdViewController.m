@@ -41,6 +41,10 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+
+/* So then after that was done then Matt asked me one day if I knew react. I said no.
+ * But do you want me to learn it? Jokingly he laughed and said sure so then back to reddit.
+ */
 - (void)one {
     self.browserImage = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, (self.view.frame.size.height/2.0)-300, 700, 600)];
     [self.browserImage setContentMode:UIViewContentModeScaleAspectFit];
@@ -71,6 +75,9 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/*
+ * And of course with every first project comes Reddit
+ */
 - (void)two {
     [UIView animateWithDuration:0.7 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:0 animations:^{
         [self.browserImage setFrame:CGRectMake(0, (self.view.frame.size.height/2.0)-300, self.view.frame.size.width, 900)];
@@ -101,6 +108,9 @@
     
 }
 
+/*
+ * So i'll just give you a quick overview of the differences
+ */
 - (void)three {
     
     self.quickOverView = [[UILabel alloc] initWithFrame:self.view.bounds];
@@ -121,6 +131,9 @@
     }];
 }
 
+/*
+ * You have your basic list of posts
+ */
 - (void)four {
     [UIView animateWithDuration:0.3 animations:^{
         [self.quickOverView setAlpha:0.0];
@@ -147,6 +160,8 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/* So we add in the labels and all of that good stuff
+ */
 - (void)five {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -158,6 +173,8 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/* And then of course the images
+ */
 - (void)six {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -169,6 +186,8 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/* But let's just look at one post in particular
+ */
 - (void)seven {
     for (int index = 0; index < self.posts.count; index++) {
         PostView *post = (PostView *)[self.posts objectAtIndex:index];
@@ -197,6 +216,9 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
+/* Rather than just treating a post as a post. Instead it was a post was a post list. Where it had a post, and all it's replies. Which was just
+ * another list of posts.
+ */
 - (void)eight {
     PostView *bigPost = [self.posts firstObject];
     CGRect startFrame = CGRectMake(((self.view.frame.size.width)/2.0) - (bigPost.frame.size.width * 0.45), bigPost.frame.origin.y, bigPost.frame.size.width * 0.9, bigPost.frame.size.height * 0.9);
@@ -220,7 +242,9 @@
     self.oldTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nine)];
     [self.view addGestureRecognizer:self.oldTap];
 }
-
+/* So it was a lot easier to display all of those messages whether they were
+ * cascading or not.
+ */
 - (void)nine {
     PostView *bigPost = [self.posts firstObject];
     for (int index = 1; index < self.posts.count; index++) {
@@ -269,6 +293,7 @@
     
 }
 
+/* Transition */
 - (void)ten {
     
     [self performSelector:@selector(eleven) withObject:nil afterDelay:0.3];

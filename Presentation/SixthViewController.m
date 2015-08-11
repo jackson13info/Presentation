@@ -10,6 +10,8 @@
 
 @interface SixthViewController ()
 
+@property (nonatomic, retain) UITapGestureRecognizer *oldTap;
+
 @end
 
 @implementation SixthViewController
@@ -19,21 +21,14 @@
     // Do any additional setup after loading the view.
     
     [self.view setBackgroundColor:[UIColor colorWithRed:1 green:0.639 blue:0.184 alpha:1] /*#ffa32f*/];
+    
+    self.oldTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(one)];
+    [self.view addGestureRecognizer:self.oldTap];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)one {
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
