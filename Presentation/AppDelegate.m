@@ -13,6 +13,8 @@
 #import "FourthViewController.h"
 #import "FifthViewController.h"
 #import "SixthViewController.h"
+#import "SeventhViewController.h"
+#import "EigthViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,7 +31,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window setRootViewController:[[SixthViewController alloc] initWithNibName:nil bundle:nil]];
+    [self.window setRootViewController:[[EigthViewController alloc] initWithNibName:nil bundle:nil]];
     [self.window makeKeyAndVisible];
     return YES;
 }

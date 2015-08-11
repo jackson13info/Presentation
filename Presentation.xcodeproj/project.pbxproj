@@ -18,6 +18,8 @@
 		BF623E9B1B54A1F60035135E /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF623E9A1B54A1F60035135E /* SKBounceAnimation.m */; };
 		BF623E9F1B54B4AF0035135E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF623E9E1B54B4AF0035135E /* SecondViewController.m */; };
 		BF623EA31B54BE5A0035135E /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF623EA21B54BE5A0035135E /* PostView.m */; };
+		BF6411591B7A6DE20055F03B /* SeventhViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6411581B7A6DE20055F03B /* SeventhViewController.m */; };
+		BF64115C1B7A78710055F03B /* EigthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64115B1B7A78710055F03B /* EigthViewController.m */; };
 		BF7300AE1B6985CF0021730B /* SixthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7300AD1B6985CF0021730B /* SixthViewController.m */; };
 		BF732F081B686395005EC34F /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF732F071B686395005EC34F /* FifthViewController.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,10 @@
 		BF623E9E1B54B4AF0035135E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		BF623EA11B54BE5A0035135E /* PostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
 		BF623EA21B54BE5A0035135E /* PostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
+		BF6411571B7A6DE20055F03B /* SeventhViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeventhViewController.h; sourceTree = "<group>"; };
+		BF6411581B7A6DE20055F03B /* SeventhViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeventhViewController.m; sourceTree = "<group>"; };
+		BF64115A1B7A78710055F03B /* EigthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EigthViewController.h; sourceTree = "<group>"; };
+		BF64115B1B7A78710055F03B /* EigthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EigthViewController.m; sourceTree = "<group>"; };
 		BF7300AC1B6985CF0021730B /* SixthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixthViewController.h; sourceTree = "<group>"; };
 		BF7300AD1B6985CF0021730B /* SixthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixthViewController.m; sourceTree = "<group>"; };
 		BF732F061B686395005EC34F /* FifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				BF732F071B686395005EC34F /* FifthViewController.m */,
 				BF7300AC1B6985CF0021730B /* SixthViewController.h */,
 				BF7300AD1B6985CF0021730B /* SixthViewController.m */,
+				BF6411571B7A6DE20055F03B /* SeventhViewController.h */,
+				BF6411581B7A6DE20055F03B /* SeventhViewController.m */,
+				BF64115A1B7A78710055F03B /* EigthViewController.h */,
+				BF64115B1B7A78710055F03B /* EigthViewController.m */,
 				BF623EA01B54BE4F0035135E /* Views */,
 				BF623E9C1B54A1FD0035135E /* Animations */,
 				BF623E801B5499330035135E /* Images.xcassets */,
@@ -272,7 +282,9 @@
 				BF623E9B1B54A1F60035135E /* SKBounceAnimation.m in Sources */,
 				BF623EA31B54BE5A0035135E /* PostView.m in Sources */,
 				BF623E7C1B5499330035135E /* ViewController.m in Sources */,
+				BF6411591B7A6DE20055F03B /* SeventhViewController.m in Sources */,
 				BF623E791B5499330035135E /* AppDelegate.m in Sources */,
+				BF64115C1B7A78710055F03B /* EigthViewController.m in Sources */,
 				BF623E761B5499330035135E /* main.m in Sources */,
 				BF1FDDDE1B55983900FA46BF /* ThirdViewController.m in Sources */,
 				BF7300AE1B6985CF0021730B /* SixthViewController.m in Sources */,
