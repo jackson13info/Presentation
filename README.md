@@ -13,3 +13,6 @@ For releasing:
 - A couple ideas of how to do this:
 -   Only at the head of each branch
 -   Or you could keep adding files of archives to the branch release tag.
+
+This guy has great writeup of his Makefile
+https://github.com/yoheimuta/mtburn-ios-sdk-demoapp/blob/411b36e7e4a87ccb8151936ab581c927a343785e/Makefile
