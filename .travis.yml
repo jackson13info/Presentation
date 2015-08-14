@@ -13,12 +13,9 @@ env:
   - PROFILE_NAME="profile"
   - XCODE_RELEASE_SCHEME="Presentation"
 before_script:
-- pwd
-- ls scripts
-- ls scripts/profiles
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profiles/profile.mobileprovision.enc -d -a -out scripts/profiles/profile.mobileprovision
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dis.cer.enc -d -a -out scripts/certs/dis.cer
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dis.p12.enc -d -a -out scripts/certs/dis.p12
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profiles/profile.mobileprovision.enc -d -out scripts/profiles/profile.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dis.cer.enc -d -out scripts/certs/dis.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dis.p12.enc -d -out scripts/certs/dis.p12
 - ./scripts/add-key.sh
 script:
 - xctool -project Presentation.xcodeproj -scheme $XCODE_RELEASE_SCHEME -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
