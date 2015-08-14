@@ -7,6 +7,7 @@
 //
 
 #import "SeventhViewController.h"
+#import "EigthViewController.h"
 
 @interface SeventhViewController ()
 
@@ -30,10 +31,6 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
-/* So then of course Xcode Server will do all of it's building
- * and testing of the system. That's stuff I didn't touch too
- * much. There was only this one error dealing with exportOptionsPlist.
- */
 - (void)one {
     [self.view removeGestureRecognizer:self.oldTap];
     
@@ -161,7 +158,8 @@
     [redView setBackgroundColor:[UIColor colorWithRed:211.0/255.0 green:60.0/255.0 blue:51.0/255.0 alpha:1]];
     
     [UIView transitionFromView:self.walleImage toView:redView duration:1.0 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
-        
+        EigthViewController *eigth = [[EigthViewController alloc] initWithNibName:nil bundle:nil];
+        [self presentViewController:eigth animated:NO completion:nil];
     }];
 }
 

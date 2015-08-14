@@ -47,9 +47,6 @@
     
 }
 
-/* And this was a project that was very ongoing. Still working on it today
- * and it was supposed to be something I look into.
- */
 - (void)one {
     [UIView animateWithDuration:0.9 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:0.7 options:0 animations:^{
         [self.botsLabel setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -60,8 +57,7 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
-/* So you ask, what is a bot. Well a bot is
- */
+
 - (void)two {
     self.androidBot = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.frame.size.width/2.0)-100, -200, 200, 200)];
     [self.androidBot setContentMode:UIViewContentModeScaleAspectFit];
@@ -81,8 +77,6 @@
     }];
 }
 
-/* Whoops. sorry. That was an android bot. That's an Xcode Bot.
- */
 - (void)three {
     UIView *window = self.view;
     
@@ -131,7 +125,6 @@
     }];
 }
 
-/* Transition */
 - (void)four {
     
     UIView *blankView = [[UIView alloc] initWithFrame:self.view.frame];

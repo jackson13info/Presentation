@@ -33,9 +33,6 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
-/* So with anything I had to start by looking at the API. That background's a little too bright.
- * Let's bring it down just a bit.
- */
 - (void)one {
     self.apiImage= [[UIImageView alloc] initWithFrame:CGRectMake((self.view.frame.size.width/2.0)-1, (self.view.frame.size.height/2.0)-1, 2, 2)];
     [self.apiImage setContentMode:UIViewContentModeScaleAspectFit];
@@ -54,7 +51,6 @@
     
 }
 
-/* That's better */
 - (void)two {
     [UIView animateWithDuration:0.5 animations:^{
         [self.view setBackgroundColor:[UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1]];
@@ -66,7 +62,6 @@
 }
 
 
-/* So with any API, you would think there would be a ton of documentation. */
 - (void)three {
     [UIView animateWithDuration:0.6 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.7 options:0 animations:^{
         [self.apiImage setFrame:CGRectMake(self.view.frame.size.width+50, (self.view.frame.size.height/2.0)-200, 400, 400)];
@@ -77,8 +72,6 @@
     }];
 }
 
-/* You would think hundreds of documents or even just a bunch of pages. Especially since it's apple.
- */
 - (void)four {
     
     self.documents = [[NSMutableArray alloc] init];
@@ -121,7 +114,6 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
-/* Well let's just say there was one page. */
 - (void)five {
     for (int index = 1; index < self.documents.count; index++) {
         UIView *document = [self.documents objectAtIndex:index];
@@ -139,7 +131,6 @@
     [self.view addGestureRecognizer:self.oldTap];
 }
 
-/* So let's just zoom in on that page.*/
 - (void)six {
     UIView *document = [self.documents firstObject];
     CGRect frame = document.frame;
@@ -157,7 +148,6 @@
     }];
 }
 
-/* Well maybe it wasn't even a document, it was a presentation slide. */
 - (void)seven {
     UIView *document = [self.documents firstObject];
     CGRect frame = document.frame;
@@ -175,8 +165,6 @@
     }];
 }
 
-/* and it was an apple slide so let's just make that black.
- */
 - (void)eight {
     UIView *document = [self.documents firstObject];
     
@@ -191,9 +179,6 @@
 
 }
 
-/* But in reality, it wasn't even the whole slide. It was just one line. And that was the 
- * url for the api. Which was pretty important.
- */
 - (void)nine {
     UIView *document = [self.documents firstObject];
     CGRect frame = document.frame;
@@ -212,10 +197,6 @@
     }];
 }
 
-/* And from that I was able to figure everything else out with a huge help
- * from other people on google and charles proxy. Also looking into Apple's source code to 
- * see what they were using helped.
- */
 - (void)ten {
     UIView *document = [self.documents firstObject];
     CGRect frame = document.frame;
