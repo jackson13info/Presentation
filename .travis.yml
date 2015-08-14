@@ -16,7 +16,7 @@ before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profiles/profile.mobileprovision.enc -d -out scripts/profiles/profile.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dis.cer.enc -d -out scripts/certs/dis.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dis.p12.enc -d -out scripts/certs/dis.p12
-- ./scripts/add-key.sh
+- ./scripts/add-keys.sh
 script:
 - xctool -project Presentation.xcodeproj -scheme $XCODE_RELEASE_SCHEME -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 after_success:
