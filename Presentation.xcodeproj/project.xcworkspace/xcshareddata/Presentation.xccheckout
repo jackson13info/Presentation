@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>770DA746-F5B3-4561-89BE-1B1B8BB8AC9F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Presentation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>03AC406CFE7588CDFADBEC698C01400D077DC555</key>
+		<string>https://github.com/jackson13info/Presentation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Presentation.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>03AC406CFE7588CDFADBEC698C01400D077DC555</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jackson13info/Presentation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>03AC406CFE7588CDFADBEC698C01400D077DC555</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>03AC406CFE7588CDFADBEC698C01400D077DC555</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Presentation</string>
+		</dict>
+	</array>
+</dict>
+</plist>
