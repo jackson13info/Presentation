@@ -12,7 +12,6 @@ env:
   - 'DEVELOPER_NAME="iPhone Distribution: WillowRoot Apps, LLC (753J68XC6W)"'
   - PROFILE_NAME="profile"
   - XCODE_RELEASE_SCHEME="Presentation"
-  - secure: NuUTnfiofHwAtMv1LjLf8e+JPOUahP+wmwMFt0B1Q3AejB0IEgudHgNU3CjICTIT85r9uQCojSOc+WRN4u3zmnuDOwZvncdxhedwP0oeqvWQP+hwBm8MCghwF4isLY+o3jct4suk4gaC6hMTKMQoF/572oBHs9vzNoJhqryslRVhGdWq2vh0KzvWyPR4CwhHbECr/JDyLYiiKlMcRpGlJRROSOe+t6i38O2oRFcLVCXteG2DsKSsU3vxa+lHKxOcHu9KuO77G6x1T3qVSgrDi3+Ij8euQ4tNvpClwWFpkGSuZzkdkckUgfr8YjEDtmijfzvtOQWKlRa6TPq9aYdkF1xuxyjTSsWwBsu0BH+VdhC3vv3qjnzBHWBxZVxtzlLH7ItfBCE9HE73KNj5xi4VWOBEuxATD8d2VVwow2neG6U/mxetltpVYDKl9gwYafVAPlEJHTqN8Pi7kQaqGk7PBFuJ5cJOzdMtjv7A4qy/1P/9Vtr6wflQcPFWuLTeaBuzjX0WWTuLOEQ6Oy02ufGKjt1L+YaPd0b5ErnD5r/8tcYiJXmxZXEIU84AxIUsPpZgCwveKaqpYamZvau+CIZhsDnXjAsA8Xce0GOJxk0x3N64Zc2iidg3uApSK6hEYLOgaM5hRpf+3sF7/PijXZBFptiWstKp4caV8dkP6Cbtn0I=
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profiles/profile.mobileprovision.enc
   -d -out scripts/profiles/profile.mobileprovision
@@ -29,7 +28,9 @@ after_success:
 after_script:
 - ./scripts/delete-keys.sh
 deploy:
-    provider:releases
-    api_key:$githubToken
-    file:"$OUTPUTDIR/$APP_NAME.ipa"
-    skip_cleanup:true
+  provider: releases
+  api_key:
+    secure: yDHw7eKMmml9HrgHWH4EPR1mi/YlyjM8Ys+t9eCtj1jB1+1aGAOlQGELYqcLMPOQ+qy5uUoH8NqFd+QdzapuCUeHcDUCxZfK+hdW1+kznldDeid4eN/NjrvtILI0P5PzfgvCZ5coDWdO0+ZADhFLyRzXI86NCxC+rB+Lqjj73l6O8d22QgdPyItW0/t+g5SMEwK0xPZcM8/yae6MsjDK+jbqRsDabOsKAptldysQnztC7EtR4nz13MjvqbXDbFx7oLviWN1gNheXm64md6DMatgl02uGuEuvTOPS9UrPsfg37Md4DPUzR+I/Wk1nEtgJTjotTQYJbwpJVF9PNueDw7dpITbDjzDOljdPixk+ipJIB345wK12pEqVb76Tze4kiSiR6uMeii4NXm6dsCBUEiqyGQx8Kp0RqxGj8w+8V9DF2tqkQr/HNfi0OlkP/eips65U8PB/4Pk4iOUhKah10hwAF2uWQKeH6gb2zkteiKspQyuJloiEKgr5ecypQH3c+xpGoIgu7HRsxHmmwdiTqT6pJL9p5gc/5MFL3h0piHhlDFoSX6gX/XDxe1NJZ72Tg7OkPUzWk+QCRcnw+O4KBG+BAcQ+zeEhEqRx0um9zJg/cf+JoR2N/0DeyRw0Q72aLUMzI+sAbxHcI28YTpUIBcYYqt6k36yrLhYM07rEovQ=
+  file: build/Release-iphoneos/Presentation.ipa
+  on:
+    repo: jackson13info/Presentation
