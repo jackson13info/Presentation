@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>770DA746-F5B3-4561-89BE-1B1B8BB8AC9F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Presentation</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>03AC406CFE7588CDFADBEC698C01400D077DC555</key>
 		<string>https://github.com/jackson13info/Presentation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Presentation.xcodeproj</string>
+	<string>Presentation.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>03AC406CFE7588CDFADBEC698C01400D077DC555</key>

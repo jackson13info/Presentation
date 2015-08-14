@@ -4,3 +4,22 @@ xcode_scheme: Presentation
 xcode_sdk: iphonesimulator8.1
 notifications:
   email: false
+env:
+  global:
+  - secure: zGJz8kdGtLX2+ywObNkX2gvtgz9qiHX1WOh4v/l5WLVeVpt7123RcFo5ennax2cyM9KKwuwwUX8QwvGv2PYIIG07cCwf2rOsZfux90JmkI49/Q2PfcV3/xCBFqmjETiIBSgsN78MCmQUgVnPk1hHSwMHnWKsJvRpcDbD/gluiGTZGCzDZGfi8qOgULdZx8xlnyw0GKKCi668pauB5awqWr+w6E2u3p6cp5Ujtd/5ROmIa30be0Wz3z8WMhgH578wjGw9pyBcw5N15Ke4r3tPhW8CWmWCrbmDeGxK7Xam7BhznK1lo8X+fmB5b1KRdarZGF8lN5Mw0terNnEN4dTDqRJrZ9gz1QluNB+Jdxjhvz44DI1cE5zahhe6yVAZvbiYRDablT92gx18nFPh/r1u/DXBsRaR9J6JouZoxOljAaM3ZS5+H0g7WtNk17ZMLgS4SE0nIPi5bD82EiGqERPpRUO+MQqU6zmGGcKpDjDsnehYA4evDaeBLQqucy5o701n29Q312EPQ/IrbiN89+smvtI3S4pKHk2qGm/g3gkej35ZhR2JnPdWj7Hxsy5MDyjWoOMX6T8qhlV0OS/QkT83hp/iIGCK8omNnQydsV+ciGseJQtkZgYgQRe75kTAAZIBwIblXasRxZ8KvF/f2dCWSOZ5AO3oxxsvEzueG08SmSw=
+  - secure: WDtmcehFLzfT1k1zAkIEDRa6lSJ1rXYxN4uswvhP2Knar3o2ZFNX4i5JK1mnl3YWL9gR3P3jDo3/eGmxh349SSwpmtGm9kJpmIcLNs7R8LpiRCzE4f7LVI7MMoeJyDAj8+as3x5Q66dgDC1FZl2zFuV3mpC7cGLAC6o12X+0a3rf1fQb1AK84O4sXTvynbckto5b1IAUmABFLEM3X8Y9/MwxlgUfd2uhbjxHYCYUhhh01xb0WLcn2B7thA2VLBI/cQ4G7U7X0YEvtWxHunHrMipNwmVD+dQBhNeZfdJDSs132A5p7qcYhGHpZFY6zliFts7l0KLN0GVupAumhhuKhPb/YPZkZUrT0iv/hN4NNMi8mQCNooNKej/EPLVtRKZyCbK3UpmNtDpqxkclpM3inapCa/QqRhUvV7KH+4ksHlWDF/zdIEy5C3miMQcdKW9PwUvJts3S6Ahg/qIL2q212uO8BZ8Rc7YvAnWJHw2Q+Psxi8OQigbPi1r8wdGg7WcaAVrNve/a8G4Z0JTL4nVw/W2U2knntC/PvUissezpSTeTEaa1afGTbj3POHta/WkQTzOS9r1N4PS0dFjp93gjKBgxmHRO6wlBb9XWNpthKAl2f6ZElSZqJvCQ0tr3o9ilY/YbrMY15u+GCMfBxqQN3Mf98932j44uBSi2pg3aOf0=
+  - APP_NAME="Presentation"
+  - 'DEVELOPER_NAME="iPhone Distribution: WillowRoot Apps, LLC (753J68XC6W)"'
+  - PROFILE_NAME="profile"
+  - XCODE_RELEASE_SCHEME="Presentation"
+before_script:
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/profile.mobileprovision.enc -d -a -out scripts/cert/profile.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/dis.cer.enc -d -a -out scripts/cert/dis.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/dis.p12.enc -d -a -out scripts/cert/dis.p12
+- ./scripts/add-key.sh
+script:
+- xctool -project Presentation.xcodeproj -scheme $XCODE_RELEASE_SCHEME -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+after_success:
+- ./scripts/sign-upload.sh
+after_script:
+- ./scripts/delete-keys.sh
